@@ -56,9 +56,6 @@ const createStore = <T, P>(
     useStateValue(),
     useDispatch(),
   ]
-  // stateContext should have been a private property ,
-  // but class components would require the actual context to access the values since they cannot use hooks
-  // TODO: stateContext should be private once all components are migrated to functional components
   return [Provider, useState, stateContext]
 }
 
